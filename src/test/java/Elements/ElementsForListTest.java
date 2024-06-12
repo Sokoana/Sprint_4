@@ -1,6 +1,6 @@
 package Elements;
 
-public class Elements_1test {
+public class ElementsForListTest {
     //Заголовок страницы
     ///html/head/title
     //<title>undefined</title>
@@ -56,8 +56,5 @@ public class Elements_1test {
     //Ответ:Да, обязательно. Всем самокатов! И Москве, и Московской области.
     //*[@id="accordion__panel-7"]/p
     //<p>Да, обязательно. Всем самокатов! И Москве, и Московской области.</p>
-    //кнопка "Да все привыкли"
-    //*[@id="rcc-confirm-button"]
-    //<button class="App_CookieButton__3cvqF" id="rcc-confirm-button" style="background: rgb(255, 212, 45); border: 0px; border-radius: 0px; box-shadow: none; color: black; cursor: pointer; flex: 0 0 auto; padding: 5px 10px; margin: 15px;">да все привыкли</button>
 
 }

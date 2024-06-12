@@ -1,6 +1,6 @@
 package Elements;
 
-public class Elements_2test {
+public class ElementsForOder {
     //кнопка заказать вверху
     //*[@id="root"]/div/div[1]/div[1]/div[2]/button[1]
     //<button class="Button_Button__ra12g">Заказать</button>
@@ -56,10 +56,8 @@ public class Elements_2test {
     //окно хотите оформить заказ
         //<div class="Order_ModalHeader__3FDaJ">Хотите оформить заказ?<br><div class="Order_Text__2broi">&nbsp;</div></div>
     //*[@id="root"]/div/div[2]/div[5]/div[1]
-    //да
-    //*[@id="root"]/div/div[2]/div[5]/div[2]/button[2]
-    //<button class="Button_Button__ra12g Button_Middle__1CSJM">Да</button>
-    //
+
+
 
 
 
