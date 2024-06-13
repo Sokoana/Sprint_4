@@ -1,7 +1,6 @@
 package tests;
 
-import Page_Question.Browsers;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import pageQuestion.Browsers;
 
 
 import org.junit.After;
@@ -10,8 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import Page_Question.OrderScotter;
+import pageQuestion.OrderScotter;
 
 
 
@@ -58,11 +56,12 @@ import Page_Question.OrderScotter;
             driver.get("https://qa-scooter.praktikum-services.ru/");
 
             OrderScotter pageOrderByPageTopButton = new OrderScotter(driver);
-            pageOrderByPageTopButton.CookieButtonClick();
+            pageOrderByPageTopButton.cookieButtonClick();
             pageOrderByPageTopButton.clickPageTopButtonOrder();
             pageOrderByPageTopButton.setOrderFields(firstName, lastName, address, phoneNumber);
             pageOrderByPageTopButton.setOrderFieldsAboutRent(comment);
             pageOrderByPageTopButton.setConfirmWindowOrder();
+            pageOrderByPageTopButton.orderTitleIsDisplayed();
         }
 
         // Тестовый метод для нижней кнопки
@@ -71,11 +70,12 @@ import Page_Question.OrderScotter;
         public void testPassedScooterOrderByPageMiddleButton() {
             driver.get("https://qa-scooter.praktikum-services.ru/");
             OrderScotter pageOrderByPageTopButton = new OrderScotter(driver);
-            pageOrderByPageTopButton.CookieButtonClick();
+            pageOrderByPageTopButton.cookieButtonClick();
             pageOrderByPageTopButton.clickPagelowerButtonOrder();
             pageOrderByPageTopButton.setOrderFields(firstName, lastName, address, phoneNumber);
             pageOrderByPageTopButton.setOrderFieldsAboutRent(comment);
             pageOrderByPageTopButton.setConfirmWindowOrder();
+            pageOrderByPageTopButton.orderTitleIsDisplayed();
         }
         @After
         public void tearDown() {

@@ -1,13 +1,14 @@
-package Page_Question;
+package pageQuestion;
 
 
+import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static com.codeborne.selenide.Condition.text;
 
 
 public class OrderScotter {
@@ -22,7 +23,7 @@ public class OrderScotter {
 
 
     private By topButtunOrder = By.xpath(".//button[@class='Button_Button__ra12g' and text()='Заказать']");
-    private By LowerButtunOrder = By.className("Button_Middle__1CSJM");;
+    private By lowerButtunOrder = By.className("Button_Middle__1CSJM");;
 
     private By nameField = By.xpath(".//input[@placeholder='* Имя']");
 
@@ -57,11 +58,12 @@ public class OrderScotter {
     //локатор для выбора станции в выпавшем списке с метро
     private final By inputStation = By.xpath(".//div[text() = 'Бульвар Рокоссовского']");
 
+    @FindBy(className = "Order_ModalHeader__3FDaJ")
+    private SelenideElement orderTitle;
 
 
 
-
-    public void CookieButtonClick() {
+    public void cookieButtonClick() {
         driver.findElement(сookieConfirm).click();
     }
 
@@ -71,7 +73,7 @@ public class OrderScotter {
 
     //метод клика на кнопку "Заказать" внизу экрана
     public void clickPagelowerButtonOrder() {
-        driver.findElement(LowerButtunOrder).click();
+        driver.findElement(lowerButtunOrder).click();
 
     }
 
@@ -175,6 +177,11 @@ public class OrderScotter {
             driver.findElement(confirmWindow).isEnabled();
             driver.findElement(buttonYes).click();
         }
+
+    //метод проверки заголовка "Заказ оформлен"
+    public void orderTitleIsDisplayed() {
+        orderTitle.shouldHave(text("Заказ оформлен"));
+    }
     }
 
 

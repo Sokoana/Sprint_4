@@ -1,4 +1,4 @@
-package Page_Question;
+package pageQuestion;
 import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;

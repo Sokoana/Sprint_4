@@ -1,4 +1,4 @@
-package Elements;
+package elements;
 
 public class ElementsForListTest {
     //Заголовок страницы

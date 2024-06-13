@@ -1,4 +1,4 @@
-package Page_Question;
+package pageQuestion;
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,7 +17,7 @@ public class PageObjectQuestions {
     }
     //локатор до окна с выпадающим списком вопросов
     private final By scrollToThePoint = By.xpath(".//div[@class= 'accordion']");
-    private  By CookieConfirm = By.xpath("//*[@id='rcc-confirm-button']");
+    private  By cookieConfirm = By.xpath("//*[@id='rcc-confirm-button']");
     public String buttonNum = "//*[@id='accordion__heading-%d']";
     public String pointText = ".//div[@id='accordion__panel-%d']/p";
 
@@ -37,8 +37,8 @@ public class PageObjectQuestions {
     }
 
 
-    public void CookieButtonClick() {
-        driver.findElement(CookieConfirm).click();
+    public void cookieButtonClick() {
+        driver.findElement(cookieConfirm).click();
     }
 }
 

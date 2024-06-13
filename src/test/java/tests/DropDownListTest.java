@@ -1,8 +1,8 @@
 package tests;
 
 
-import Page_Question.Browsers;
-import Page_Question.PageObjectQuestions;
+import pageQuestion.Browsers;
+import pageQuestion.PageObjectQuestions;
 import org.junit.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,8 +19,8 @@ public class DropDownListTest {
     WebDriver driver = browser.webDriverFromChrome();
 
 
-    int pointText;
-    String resultText;
+    private final int pointText;
+    private final String resultText;
 
 
     public DropDownListTest(int pointText, String resultText) {
@@ -59,7 +59,7 @@ public class DropDownListTest {
         driver.get("https://qa-scooter.praktikum-services.ru/");
 
         PageObjectQuestions pageObjectQuestions = new PageObjectQuestions(driver);
-        pageObjectQuestions.CookieButtonClick();
+        pageObjectQuestions.cookieButtonClick();
         pageObjectQuestions.scrollOfListQuestions();
         pageObjectQuestions.checkButton(pointText);
         String actualText = pageObjectQuestions.getPoint(pointText);
