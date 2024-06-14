@@ -58,8 +58,7 @@ public class OrderScotter {
     //локатор для выбора станции в выпавшем списке с метро
     private final By inputStation = By.xpath(".//div[text() = 'Бульвар Рокоссовского']");
 
-    @FindBy(className = "Order_ModalHeader__3FDaJ")
-    private SelenideElement orderTitle;
+    private By headerOder= By.xpath(".//div[@class = 'Order_ModalHeader__3FDaJ']");
 
 
 
@@ -178,9 +177,9 @@ public class OrderScotter {
             driver.findElement(buttonYes).click();
         }
 
-    //метод проверки заголовка "Заказ оформлен"
-    public void orderTitleIsDisplayed() {
-        orderTitle.shouldHave(text("Заказ оформлен"));
+
+    public String orderTitleIsDisplayed(){
+        return driver.findElement(headerOder).getText();
     }
     }
 
