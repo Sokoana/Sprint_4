@@ -1,8 +1,8 @@
 package tests;
 
 
-import pageQuestion.Browsers;
-import pageQuestion.PageObjectQuestions;
+import pagesfortest.Browsers;
+import pagesfortest.PageObjectQuestions;
 import org.junit.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;

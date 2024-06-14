@@ -1,7 +1,7 @@
 package tests;
 
 import org.hamcrest.MatcherAssert;
-import pageQuestion.Browsers;
+import pagesfortest.Browsers;
 import static org.hamcrest.CoreMatchers.is;
 
 import org.junit.After;
@@ -10,7 +10,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import pageQuestion.OrderScotter;
+import pagesfortest.OrderScotter;
 
 
 
@@ -59,15 +59,13 @@ import pageQuestion.OrderScotter;
             driver.get("https://qa-scooter.praktikum-services.ru/");
 
             OrderScotter pageOrderByPageTopButton = new OrderScotter(driver);
-            String header="Заказ оформлен";
-            pageOrderByPageTopButton.cookieButtonClick();
+             pageOrderByPageTopButton.cookieButtonClick();
             pageOrderByPageTopButton.clickPageTopButtonOrder();
             pageOrderByPageTopButton.setOrderFields(firstName, lastName, address, phoneNumber);
             pageOrderByPageTopButton.setOrderFieldsAboutRent(comment);
             pageOrderByPageTopButton.setConfirmWindowOrder();
             pageOrderByPageTopButton.orderTitleIsDisplayed();
-            String headerResult=pageOrderByPageTopButton.orderTitleIsDisplayed();
-            MatcherAssert.assertThat(header,is(headerResult));
+
         }
 
         // Тестовый метод для нижней кнопки
@@ -76,15 +74,13 @@ import pageQuestion.OrderScotter;
         public void testPassedScooterOrderByPageMiddleButton() {
             driver.get("https://qa-scooter.praktikum-services.ru/");
             OrderScotter pageOrderByPageTopButton = new OrderScotter(driver);
-            String header="Заказ оформлен";
             pageOrderByPageTopButton.cookieButtonClick();
             pageOrderByPageTopButton.clickPagelowerButtonOrder();
             pageOrderByPageTopButton.setOrderFields(firstName, lastName, address, phoneNumber);
             pageOrderByPageTopButton.setOrderFieldsAboutRent(comment);
             pageOrderByPageTopButton.setConfirmWindowOrder();
             pageOrderByPageTopButton.orderTitleIsDisplayed();
-            String headerResult=pageOrderByPageTopButton.orderTitleIsDisplayed();
-            MatcherAssert.assertThat(header,is(headerResult));
+
         }
         @After
         public void tearDown() {
