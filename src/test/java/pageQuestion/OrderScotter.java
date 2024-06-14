@@ -58,7 +58,7 @@ public class OrderScotter {
     //локатор для выбора станции в выпавшем списке с метро
     private final By inputStation = By.xpath(".//div[text() = 'Бульвар Рокоссовского']");
 
-    private By headerOder= By.xpath(".//div[@class = 'Order_ModalHeader__3FDaJ']");
+    private final By headerOder= By.xpath(".//div[@class = 'Order_ModalHeader__3FDaJ']");
 
 
 
